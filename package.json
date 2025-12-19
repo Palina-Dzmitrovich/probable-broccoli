@@ -1,0 +1,26 @@
+{
+  "name": "probable-broccoli",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Palina-Dzmitrovich/probable-broccoli#readme",
+  "bugs": {
+    "url": "https://github.com/Palina-Dzmitrovich/probable-broccoli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palina-Dzmitrovich/probable-broccoli.git"
+  },
+  "license": "ISC",
+  "author": "Palina Dzmitrovich",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "@types/k6": "^1.4.0",
+    "playwright": "^1.57.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3"
+  }
+}
