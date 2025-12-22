@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Change directory
+        run: cd /perf
+
       - name: Build Docker Image
         run: docker build -t my-k6-test .
 
