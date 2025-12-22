@@ -1,0 +1,18 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  script:
+      - apt-get update
+      - apt-get install -y docker.io
+      - cd \perf
+      - sudo docker build -t my-k6-test .
+    
+test_perf:
+  stage: test perf
+  script: 
+    - sudo docker run my-k6-test
