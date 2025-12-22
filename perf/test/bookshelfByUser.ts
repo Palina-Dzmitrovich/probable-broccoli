@@ -7,6 +7,7 @@ export default () => {
     .replace("userId", "1")
     .replace("shelf", "1");
   const response = http.get(url);
+  console.log(`STATUS: ${response.status}`);
   check(response, { "200": (r) => r.status === 200 });
   sleep(1);
 };
