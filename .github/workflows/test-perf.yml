@@ -1,0 +1,25 @@
+yaml
+name: Performance tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '18.x'
+      name: Install Docker
+      run: apt-get update
+      run: apt-get install -y docker.io
+      name: Run tests
+      run: cd \perf
+      run: sudo docker build -t my-k6-test .
