@@ -1,12 +1,12 @@
-const baseBooksUrl = 'https://www.googleapis.com/books/v1'
+const harryPotterUrl = 'https://potterapi-fedeperin.vercel.app/en'
 
-export const booksUrls = {
-  bookshelf: {
-    list: `${baseBooksUrl}/users/userId/bookshelves`,
-    shelf: `${baseBooksUrl}/users/userId/bookshelves/shelf`,
+export const harryPotterUrls = {
+  books: {
+    list: `${harryPotterUrl}/books`,
+    randomBook: `${harryPotterUrl}/books/random`,
   },
-  volume: {
-    volumeId: `${baseBooksUrl}/volumes/volumeId`,
-    volume: `${baseBooksUrl}/volumes`
+  characters: {
+    list: `${harryPotterUrl}/characters`,
+    volume: `${harryPotterUrl}/characters/random`
   } 
 };

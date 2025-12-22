@@ -1,5 +1,5 @@
-import bookshelfByUser from "./bookshelfByUser.ts";
-import bookshelfList from "./bookshelfList.ts";
+import bookRandom from "./bookRandom.ts";
+import booksList from "./booksList.ts";
 
 export const options = {
   scenarios: {
@@ -28,8 +28,8 @@ export const options = {
 };
 
 export function runTestB1() {
-  bookshelfList();
+  booksList();
 }
 export function runTestB2() {
-  bookshelfByUser();
+  bookRandom();
 }
