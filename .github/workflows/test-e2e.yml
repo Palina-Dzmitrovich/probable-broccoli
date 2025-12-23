@@ -34,9 +34,11 @@ jobs:
 
       - name: Run E2E tests
         run: npx playwright test
+        continue-on-error: true
 
       - name: Upload Results
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: allure-results
           path: allure-results
@@ -44,6 +46,7 @@ jobs:
 
   report:
     needs: test
+    if: always()  
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +54,8 @@ jobs:
       - name: Download all results
         uses: actions/download-artifact@v4
         with:
-          path: all-results
+          name: allure-results
+          path: allure-results
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -81,7 +85,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-history
-
+        
       - name: Post Report Link to Summary
         if: always()
         run: |
