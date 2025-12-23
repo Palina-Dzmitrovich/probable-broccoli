@@ -19,7 +19,8 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test:e2e": "npx playwright test",
-    "seeReport": "npx playwright show-report"
+    "seeReport": "npx playwright show-report",
+    "report": "allure serve allure-results"
   },
   "dependencies": {
     "@types/k6": "^1.4.0",
@@ -29,6 +30,7 @@
     "@eslint/js": "^9.39.2",
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3",
+    "allure-playwright": "^3.4.3",
     "eslint": "^9.39.2",
     "eslint-plugin-playwright": "^2.4.0",
     "typescript": "^5.9.3",

@@ -32,9 +32,24 @@ jobs:
       - name: Run E2E tests
         run: npx playwright test --shard=${{ matrix.shard }}
 
-      - uses: actions/upload-artifact@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+              distribution: 'temurin'
+              java-version: '17'
+
+      - name: Load Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+              ref: gh-pages
+              path: gh-pages
+
+      - name: Build Allure Report
+        uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
-          name: playwright-report-${{ strategy.job-index }}
-          path: playwright-report/
-          retention-days: 90
+              allure_results: allure-results
+              allure_history: allure-history
+              keep_reports: 20
