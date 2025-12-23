@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1826","Open Playwright for .NET Homepage","webkit","Tue Dec 23 14:51:46 UTC 2025","passed","Tue Dec 23 14:51:47 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
+"","498","Open Docs page from Homepage","chromium","Tue Dec 23 14:51:31 UTC 2025","passed","Tue Dec 23 14:51:32 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
+"","675","Open Playwright for .NET Homepage","chromium","Tue Dec 23 14:51:33 UTC 2025","passed","Tue Dec 23 14:51:34 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
+"","6260","Open Docs page from Homepage","webkit","Tue Dec 23 14:51:39 UTC 2025","passed","Tue Dec 23 14:51:45 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
+"","1618","Open Docs page from Homepage","firefox","Tue Dec 23 14:51:34 UTC 2025","passed","Tue Dec 23 14:51:36 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
+"","1113","Open Playwright for .NET Homepage","firefox","Tue Dec 23 14:51:36 UTC 2025","passed","Tue Dec 23 14:51:38 UTC 2025","Playwright Homepage","homepage.spec.ts","",""
