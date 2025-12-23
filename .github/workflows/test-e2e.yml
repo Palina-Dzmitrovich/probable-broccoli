@@ -12,8 +12,6 @@ jobs:
     
     strategy:
       fail-fast: false
-      matrix:
-        shard: [1/2, 2/2]
 
     steps:
       - uses: actions/checkout@v4
@@ -30,7 +28,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run E2E tests
-        run: npx playwright test --shard=${{ matrix.shard }}
+        run: npx playwright test
 
       - name: Setup Java
         uses: actions/setup-java@v4
