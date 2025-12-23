@@ -81,3 +81,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-history
+
+      - name: Post Report Link to Summary
+        if: always()
+        run: |
+          echo "### 📊 Test Report Ready!" >> $GITHUB_STEP_SUMMARY
+          echo "The Allure report has been generated and deployed." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "[Click here to view the report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)" >> $GITHUB_STEP_SUMMARY
